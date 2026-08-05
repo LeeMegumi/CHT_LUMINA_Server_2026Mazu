@@ -1,0 +1,2 @@
+# CHT_LUMINA_Server_2026Mazu
+Lumina馬祖天后宮版本
