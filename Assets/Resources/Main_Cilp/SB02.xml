@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Exported from Rogo Digital LipSync Pro 1.52. Exported at 2021/8/27 下午 03:52:55-->
+<!--Note: This format cannot directly reference the linked AudioClip like a LipSyncData asset can. It is advised that you use that format instead unless you need to process the data further outside of Unity.-->
+<LipSyncData>
+	<version>1.52</version>
+	<transcript />
+	<length>31.056</length>
+	<phonemes />
+	<emotions>
+		<marker start="2.553422" end="6.96853" blendFromMarker="false" blendToMarker="true" blendIn="0.01495404" blendOut="-0.01315673" customBlendIn="True" customBlendOut="False" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+		<marker start="6.559935" end="11.01942" blendFromMarker="true" blendToMarker="false" blendIn="0.01315673" blendOut="-0.01330173" customBlendIn="False" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Happy" />
+		<marker start="13.50892" end="15.74063" blendFromMarker="false" blendToMarker="true" blendIn="0.01685941" blendOut="-0.0144099" customBlendIn="True" customBlendOut="False" intensity="0.6" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Sulking" />
+		<marker start="15.29311" end="17.34276" blendFromMarker="true" blendToMarker="false" blendIn="0.0144099" blendOut="-0.01659935" customBlendIn="False" customBlendOut="True" intensity="0.3" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Fun" />
+		<marker start="19.99353" end="27.44498" blendFromMarker="false" blendToMarker="false" blendIn="0.01685941" blendOut="-0.01425443" customBlendIn="True" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+		<marker start="29.1308" end="30.19077" blendFromMarker="false" blendToMarker="false" blendIn="0.01315164" blendOut="-0.01260712" customBlendIn="True" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Grin" />
+	</emotions>
+	<gestures />
+</LipSyncData>

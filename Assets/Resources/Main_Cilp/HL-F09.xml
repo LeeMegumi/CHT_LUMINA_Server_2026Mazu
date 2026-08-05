@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Exported from Rogo Digital LipSync Pro 1.52. Exported at 2022/3/28 下午 02:27:59-->
+<!--Note: This format cannot directly reference the linked AudioClip like a LipSyncData asset can. It is advised that you use that format instead unless you need to process the data further outside of Unity.-->
+<LipSyncData>
+	<version>1.52</version>
+	<transcript />
+	<length>6.5</length>
+	<phonemes>
+		<marker time="0.9972918" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.057908" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.1384" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="1.26044" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="1.351969" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.428244" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="1.578887" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="1.662789" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.800083" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="O" phonemeNumber="3" />
+		<marker time="1.937378" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="2.099704" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="2.177643" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="2.305646" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="2.351411" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="2.427685" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="2.643162" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="2.765201" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="2.833278" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="2.965095" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="3.027127" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="3.102081" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="3.200298" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="3.259745" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="3.345038" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="3.394146" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="3.497532" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="3.616425" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="3.699134" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="3.818028" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="3.87089" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="3.985268" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="4.088654" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="4.251486" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="4.347118" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="4.455673" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="4.564228" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="4.657275" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="4.778753" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="4.895062" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="5.001032" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="5.081156" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="O" phonemeNumber="3" />
+		<marker time="5.23882" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="5.432668" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="5.493284" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+	</phonemes>
+	<emotions>
+		<marker start="0.9528301" end="2.49434" blendFromMarker="false" blendToMarker="false" blendIn="0.02717707" blendOut="-0.02717708" customBlendIn="True" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+		<marker start="3.924528" end="5.107547" blendFromMarker="false" blendToMarker="false" blendIn="0.025" blendOut="-0.02717708" customBlendIn="True" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+	</emotions>
+	<gestures />
+</LipSyncData>

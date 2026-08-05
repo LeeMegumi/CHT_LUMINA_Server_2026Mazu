@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Exported from Rogo Digital LipSync Pro 1.52. Exported at 2022/3/28 下午 02:58:48-->
+<!--Note: This format cannot directly reference the linked AudioClip like a LipSyncData asset can. It is advised that you use that format instead unless you need to process the data further outside of Unity.-->
+<LipSyncData>
+	<version>1.52</version>
+	<transcript />
+	<length>3.5</length>
+	<phonemes>
+		<marker time="0.9626269" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="0.994796" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.147298" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="1.320892" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="1.425049" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="1.587446" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="1.656023" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="1.777939" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="1.861756" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="U" phonemeNumber="2" />
+		<marker time="2.024311" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="2.105588" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="2.242743" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="E" phonemeNumber="1" />
+		<marker time="2.3418" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="2.425617" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="AI" phonemeNumber="0" />
+		<marker time="2.557692" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+		<marker time="2.589861" intensity="1" sustain="False" useRandomness="False" intensityRandomness="0.1" blendableRandomness="0.3" bonePositionRandomness="0.3" boneRotationRandomness="0.3" phonemeName="Rest" phonemeNumber="9" />
+	</phonemes>
+	<emotions>
+		<marker start="0.815312" end="2.38447" blendFromMarker="false" blendToMarker="false" blendIn="0.05547896" blendOut="-0.03773582" customBlendIn="True" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+	</emotions>
+	<gestures />
+</LipSyncData>

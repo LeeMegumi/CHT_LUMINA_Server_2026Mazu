@@ -1,0 +1,225 @@
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 7.0-c000 79.1357c9e, 2021/07/14-00:39:56        " rdfhash="6ED6644C8BD33AFB9D1144AAAFEFFC04" merged="0">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about=""
+    xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+    xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+    xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
+    xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+    xmlns:creatorAtom="http://ns.adobe.com/creatorAtom/1.0/"
+    xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/"
+    xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmpMM:InstanceID="xmp.iid:21a32533-9a00-1c4e-b5e4-7960ddd41773"
+   xmpMM:DocumentID="0c49560d-c35c-12d8-5595-620300000045"
+   xmpMM:OriginalDocumentID="xmp.did:cc438410-c9ee-8444-a321-0732b9186d60"
+   xmp:MetadataDate="2021-09-30T16:57:31+08:00"
+   xmp:ModifyDate="2021-09-30T16:57:31+08:00"
+   xmp:CreatorTool="Adobe Premiere Pro 2021.0 (Windows)"
+   xmp:CreateDate="2021-09-30T16:56:29+08:00"
+   xmpDM:videoFrameRate="30.000000"
+   xmpDM:videoFieldOrder="Progressive"
+   xmpDM:videoPixelAspectRatio="1/1"
+   xmpDM:audioSampleRate="48000"
+   xmpDM:audioSampleType="Compressed"
+   xmpDM:audioChannelType="Stereo"
+   xmpDM:startTimeScale="30"
+   xmpDM:startTimeSampleSize="1"
+   dc:format="WebM">
+   <xmpMM:History>
+    <rdf:Seq>
+     <rdf:li
+      stEvt:action="saved"
+      stEvt:instanceID="bd5dca44-9591-42b1-6b92-7d1b00000072"
+      stEvt:when="2021-09-30T16:57:31+08:00"
+      stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+      stEvt:changed="/"/>
+     <rdf:li
+      stEvt:action="created"
+      stEvt:instanceID="xmp.iid:17cadcf1-6b9b-c849-90d0-488529cd6bf5"
+      stEvt:when="2021-09-30T16:56:25+08:00"
+      stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"/>
+     <rdf:li
+      stEvt:action="saved"
+      stEvt:instanceID="xmp.iid:0f7659ae-a198-6c4f-86aa-7edbf3752fa3"
+      stEvt:when="2021-09-30T16:57:31+08:00"
+      stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+      stEvt:changed="/"/>
+     <rdf:li
+      stEvt:action="saved"
+      stEvt:instanceID="xmp.iid:21a32533-9a00-1c4e-b5e4-7960ddd41773"
+      stEvt:when="2021-09-30T16:57:31+08:00"
+      stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+      stEvt:changed="/metadata"/>
+    </rdf:Seq>
+   </xmpMM:History>
+   <xmpMM:Ingredients>
+    <rdf:Bag>
+     <rdf:li
+      stRef:instanceID="93efaa35-0b0d-b792-51c6-28af00000066"
+      stRef:documentID="7b6f72d1-c332-897f-d8e1-413000000039"
+      stRef:fromPart="time:0"
+      stRef:toPart="time:1329350400000f254016000000d5698425600000f254016000000"
+      stRef:filePath="步驟03.ai"
+      stRef:maskMarkers="None"/>
+     <rdf:li
+      stRef:instanceID="a4de937d-e1b4-1f3a-0ecf-086300000066"
+      stRef:documentID="ac959bb6-bdde-de10-69dd-928600000039"
+      stRef:fromPart="time:0"
+      stRef:toPart="time:880588800000f254016000000d6147187200000f254016000000"
+      stRef:filePath="步驟02.ai"
+      stRef:maskMarkers="None"/>
+     <rdf:li
+      stRef:instanceID="cdd514c1-eb51-526a-4737-0d5200000062"
+      stRef:documentID="f22726d8-d068-ea93-7fbd-29c600000035"
+      stRef:fromPart="time:0"
+      stRef:toPart="time:1143072000000f254016000000d5884704000000f254016000000"
+      stRef:filePath="箭頭.ai"
+      stRef:maskMarkers="None"/>
+     <rdf:li
+      stRef:instanceID="cdd514c1-eb51-526a-4737-0d5200000062"
+      stRef:documentID="f22726d8-d068-ea93-7fbd-29c600000035"
+      stRef:fromPart="time:0"
+      stRef:toPart="time:787449600000f254016000000d6240326400000f254016000000"
+      stRef:filePath="箭頭.ai"
+      stRef:maskMarkers="None"/>
+     <rdf:li
+      stRef:instanceID="f7566655-fcd2-5f25-40c6-d01e00000066"
+      stRef:documentID="cae6494e-3840-27d8-9627-acf300000039"
+      stRef:fromPart="time:0"
+      stRef:toPart="time:0d7019308800000f254016000000"
+      stRef:filePath="步驟01.ai"
+      stRef:maskMarkers="None"/>
+    </rdf:Bag>
+   </xmpMM:Ingredients>
+   <xmpMM:Pantry>
+    <rdf:Bag>
+     <rdf:li>
+      <rdf:Description
+       xmpMM:InstanceID="93efaa35-0b0d-b792-51c6-28af00000066"
+       xmpMM:DocumentID="7b6f72d1-c332-897f-d8e1-413000000039"
+       xmpMM:OriginalDocumentID="xmp.did:37465f51-8d28-9c48-b91c-b7220284aaca"
+       xmp:MetadataDate="2021-09-30T16:55:11+08:00"
+       xmp:ModifyDate="2021-09-30T16:55:11+08:00">
+      <xmpMM:History>
+       <rdf:Seq>
+        <rdf:li
+         stEvt:action="saved"
+         stEvt:instanceID="93efaa35-0b0d-b792-51c6-28af00000066"
+         stEvt:when="2021-09-30T16:55:11+08:00"
+         stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+         stEvt:changed="/"/>
+       </rdf:Seq>
+      </xmpMM:History>
+      </rdf:Description>
+     </rdf:li>
+     <rdf:li>
+      <rdf:Description
+       xmpMM:InstanceID="a4de937d-e1b4-1f3a-0ecf-086300000066"
+       xmpMM:DocumentID="ac959bb6-bdde-de10-69dd-928600000039"
+       xmpMM:OriginalDocumentID="xmp.did:f7bd6689-d329-fa4a-8f64-88516042ab51"
+       xmp:MetadataDate="2021-09-30T16:55:11+08:00"
+       xmp:ModifyDate="2021-09-30T16:55:11+08:00">
+      <xmpMM:History>
+       <rdf:Seq>
+        <rdf:li
+         stEvt:action="saved"
+         stEvt:instanceID="a4de937d-e1b4-1f3a-0ecf-086300000066"
+         stEvt:when="2021-09-30T16:55:11+08:00"
+         stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+         stEvt:changed="/"/>
+       </rdf:Seq>
+      </xmpMM:History>
+      </rdf:Description>
+     </rdf:li>
+     <rdf:li>
+      <rdf:Description
+       xmpMM:InstanceID="cdd514c1-eb51-526a-4737-0d5200000062"
+       xmpMM:DocumentID="f22726d8-d068-ea93-7fbd-29c600000035"
+       xmpMM:OriginalDocumentID="xmp.did:8df2247c-87a5-ce41-8ce2-a48b7f4d9440"
+       xmp:MetadataDate="2021-09-30T16:55:11+08:00"
+       xmp:ModifyDate="2021-09-30T16:55:11+08:00">
+      <xmpMM:History>
+       <rdf:Seq>
+        <rdf:li
+         stEvt:action="saved"
+         stEvt:instanceID="cdd514c1-eb51-526a-4737-0d5200000062"
+         stEvt:when="2021-09-30T16:55:11+08:00"
+         stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+         stEvt:changed="/"/>
+       </rdf:Seq>
+      </xmpMM:History>
+      </rdf:Description>
+     </rdf:li>
+     <rdf:li>
+      <rdf:Description
+       xmpMM:InstanceID="f7566655-fcd2-5f25-40c6-d01e00000066"
+       xmpMM:DocumentID="cae6494e-3840-27d8-9627-acf300000039"
+       xmpMM:OriginalDocumentID="xmp.did:c4cfd197-d7b8-bc43-a2c9-879605be10e6"
+       xmp:MetadataDate="2021-09-30T16:55:11+08:00"
+       xmp:ModifyDate="2021-09-30T16:55:11+08:00">
+      <xmpMM:History>
+       <rdf:Seq>
+        <rdf:li
+         stEvt:action="saved"
+         stEvt:instanceID="f7566655-fcd2-5f25-40c6-d01e00000066"
+         stEvt:when="2021-09-30T16:55:11+08:00"
+         stEvt:softwareAgent="Adobe Premiere Pro 2021.0 (Windows)"
+         stEvt:changed="/"/>
+       </rdf:Seq>
+      </xmpMM:History>
+      </rdf:Description>
+     </rdf:li>
+    </rdf:Bag>
+   </xmpMM:Pantry>
+   <xmpMM:DerivedFrom
+    stRef:instanceID="xmp.iid:17cadcf1-6b9b-c849-90d0-488529cd6bf5"
+    stRef:documentID="xmp.did:17cadcf1-6b9b-c849-90d0-488529cd6bf5"
+    stRef:originalDocumentID="xmp.did:17cadcf1-6b9b-c849-90d0-488529cd6bf5"/>
+   <creatorAtom:windowsAtom
+    creatorAtom:extension=".prproj"
+    creatorAtom:invocationFlags="/L"
+    creatorAtom:uncProjectPath="\\?\D:\Dropbox\酷米工作檔案共享\Lumina東區門市智慧語音整合式虛擬角色服務系統\操作介面UI設計\方案申請動畫\申辦三步驟.prproj"/>
+   <creatorAtom:macAtom
+    creatorAtom:applicationCode="1347449455"
+    creatorAtom:invocationAppleEvent="1129468018"/>
+   <xmpDM:projectRef
+    xmpDM:type="movie"/>
+   <xmpDM:videoFrameSize
+    stDim:w="960"
+    stDim:h="1080"
+    stDim:unit="pixel"/>
+   <xmpDM:duration
+    xmpDM:value="830"
+    xmpDM:scale="1/30"/>
+   <xmpDM:startTimecode
+    xmpDM:timeFormat="30Timecode"
+    xmpDM:timeValue="00:00:00:00"/>
+   <xmpDM:altTimecode
+    xmpDM:timeValue="00:00:00:00"
+    xmpDM:timeFormat="30Timecode"/>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Exported from Rogo Digital LipSync Pro 1.52. Exported at 2021/8/27 下午 03:59:14-->
+<!--Note: This format cannot directly reference the linked AudioClip like a LipSyncData asset can. It is advised that you use that format instead unless you need to process the data further outside of Unity.-->
+<LipSyncData>
+	<version>1.52</version>
+	<transcript />
+	<length>33.456</length>
+	<phonemes />
+	<emotions>
+		<marker start="4.808403" end="10.33397" blendFromMarker="false" blendToMarker="true" blendIn="0.01502551" blendOut="-0.009719461" customBlendIn="True" customBlendOut="False" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+		<marker start="10.00879" end="11.15312" blendFromMarker="true" blendToMarker="false" blendIn="0.009719461" blendOut="-0.01011562" customBlendIn="False" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Grin" />
+		<marker start="13.15654" end="28.74529" blendFromMarker="false" blendToMarker="true" blendIn="0.01502551" blendOut="-0.009509802" customBlendIn="True" customBlendOut="False" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Serious" />
+		<marker start="28.42714" end="29.4581" blendFromMarker="true" blendToMarker="false" blendIn="0.009509802" blendOut="-0.0116053" customBlendIn="False" customBlendOut="True" intensity="1" continuousVariation="False" variationFrequency="0.5" intensityVariation="0.35" blendableVariation="0.1" bonePositionVariation="0.1" boneRotationVariation="0.1" emotion="Fun" />
+	</emotions>
+	<gestures />
+</LipSyncData>
