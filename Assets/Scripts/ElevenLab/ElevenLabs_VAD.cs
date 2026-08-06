@@ -320,7 +320,11 @@ public class ElevenLabs_VAD : MonoBehaviour
                 Debug.Log(trad);
                 transcriptionText.text = trad;
 
-                WebRTCManager.instance.SendMessage(transcriptionText.text);
+                // V2 協議：SendChat 會自動包成 {"lang","text","v":"v2"}
+                if (KioskWebRTCManager.instance != null)
+                    KioskWebRTCManager.instance.SendChat(transcriptionText.text);
+                else
+                    Debug.LogWarning("尚未連線，辨識結果未送出");
                 ChatManager.instance.AddUserMessage(transcriptionText.text);
                 UpdateStatus("辨識完成！");
             }

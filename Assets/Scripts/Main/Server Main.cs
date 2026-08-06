@@ -3,8 +3,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static KioskWebRTCManager;
 using static ServerMain;
-using static WebRTCManager;
+using static UnityEngine.Rendering.GPUSort;
 using Random = UnityEngine.Random;
 
 public class ServerMain : MonoBehaviour
@@ -161,32 +162,22 @@ public class ServerMain : MonoBehaviour
     /// </summary>
     public void AvatarClearConversation()
     {
-        var resetCommand = new CommandData
-        {
-            cmd = "res_1",
-            arg = new ResetArg { reason = "conversation" },
-            ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
-            v = 1
-        };
-
-        WebRTCManager.instance.SendJsonMessage(resetCommand, "command");
+        // V2 協議：{"cmd":"res_1","arg":{"reason":"conversation"},"ts":秒,"v":"v2"}
+        if (KioskWebRTCManager.instance != null)
+            KioskWebRTCManager.instance.SendRes1("conversation");
+        else
+            Debug.LogWarning("尚未連線，res_1 指令未送出");
     }
     /// <summary>
     /// 跳過對話，進入下一段對話
     /// </summary>
     public void AvatarSkipConversation()
     {
-        // 建立 skip 指令
-        var skipCommand = new CommandData
-        {
-            cmd = "skip",
-            arg = new SkipArg { reason = "user_interrupt" },
-            ts = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
-            v = 1
-        };
-
-        // 發送
-        WebRTCManager.instance.SendJsonMessage(skipCommand, "command");
+        // V2 協議：{"cmd":"skip","arg":{"reason":"user_interrupt"},"ts":秒,"v":"v2"}
+        if (KioskWebRTCManager.instance != null)
+            KioskWebRTCManager.instance.SendSkip("user_interrupt");
+        else
+            Debug.LogWarning("尚未連線，skip 指令未送出");
 
     }
 
@@ -327,7 +318,11 @@ public class ServerMain : MonoBehaviour
     public void SendLuckyNumToCHT(int luckynumData)
     {
         string NumberText = FontConvert.NumberToChinese(luckynumData);
-        WebRTCManager.instance.SendMessage("我抽到了第" + NumberText + "籤，可以幫我解籤嗎?", "chat");
+        // V2 協議：SendChat 會自動包成 {"lang","text","v":"v2"}
+        if (KioskWebRTCManager.instance != null)
+            KioskWebRTCManager.instance.SendChat("我抽到了第" + NumberText + "籤，可以幫我解籤嗎?");
+        else
+            Debug.LogWarning("尚未連線，籤號未送出");
 
     }
 
