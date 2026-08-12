@@ -1,2 +1,83 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Unity .gitattributes
+#
+# 只有原始碼與 YAML 文字檔做 LF 正規化。
+# 二進位資產一律標記 -text，避免 git 的換行符轉換破壞檔案內容。
+# （2026-08-12：先前 "* text=auto" 曾導致 .hdr / .asset 等二進位檔在 checkout 時被損毀）
+
+* -text
+
+# 需要正規化的文字檔
+*.cs                text diff=csharp
+*.shader            text
+*.shadergraph       text
+*.cginc             text
+*.hlsl              text
+*.compute           text
+*.json              text
+*.md                text
+*.txt               text
+*.xml               text
+*.yml               text
+*.yaml              text
+*.gitattributes     text
+*.gitignore         text
+
+# Unity YAML（文字，但需標記為可合併）
+*.unity             text merge=unityyamlmerge eol=lf
+*.prefab            text merge=unityyamlmerge eol=lf
+*.asset             text merge=unityyamlmerge eol=lf
+*.mat               text merge=unityyamlmerge eol=lf
+*.anim              text merge=unityyamlmerge eol=lf
+*.controller        text merge=unityyamlmerge eol=lf
+*.overrideController text merge=unityyamlmerge eol=lf
+*.physicMaterial    text merge=unityyamlmerge eol=lf
+*.physicsMaterial2D text merge=unityyamlmerge eol=lf
+*.playable          text merge=unityyamlmerge eol=lf
+*.mask              text merge=unityyamlmerge eol=lf
+*.brush             text merge=unityyamlmerge eol=lf
+*.flare             text merge=unityyamlmerge eol=lf
+*.fontsettings      text merge=unityyamlmerge eol=lf
+*.guiskin           text merge=unityyamlmerge eol=lf
+*.giparams          text merge=unityyamlmerge eol=lf
+*.renderTexture     text merge=unityyamlmerge eol=lf
+*.spriteatlas       text merge=unityyamlmerge eol=lf
+*.terrainlayer      text merge=unityyamlmerge eol=lf
+*.mixer             text merge=unityyamlmerge eol=lf
+*.meta              text eol=lf
+
+# 明確標記為二進位（保險，避免任何自動偵測）
+*.hdr    binary
+*.exr    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.tga    binary
+*.tif    binary
+*.tiff   binary
+*.psd    binary
+*.bmp    binary
+*.gif    binary
+*.cubemap binary
+*.fbx    binary
+*.obj    binary
+*.blend  binary
+*.dae    binary
+*.3ds    binary
+*.wav    binary
+*.mp3    binary
+*.ogg    binary
+*.aif    binary
+*.mp4    binary
+*.mov    binary
+*.ttf    binary
+*.otf    binary
+*.dll    binary
+*.so     binary
+*.dylib  binary
+*.pdb    binary
+*.a      binary
+*.pdf    binary
+*.zip    binary
+*.unitypackage binary
+*.vrm    binary
+*.bytes  binary
