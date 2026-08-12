@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TossingWall : MonoBehaviour
 {
-    [Header("Canvas Settings")]
+    [Header("Number Range Settings")]
     [SerializeField] private bool isFirstCanvas = true; // true = 1-30, false = 31-60
 
     [Header("Grid Settings")]
@@ -42,7 +42,7 @@ public class TossingWall : MonoBehaviour
 
     void Start()
     {
-        // 根據是第一個還是第二個Canvas設定編號範圍
+        // 根據 isFirstCanvas 決定此區塊負責的編號範圍
         if (isFirstCanvas)
         {
             startNumber = 1;
@@ -62,19 +62,11 @@ public class TossingWall : MonoBehaviour
     /// </summary>
     void InitializeWall()
     {
-        // 確保 Canvas 設定正確
-        Canvas canvas = GetComponent<Canvas>();
-        if (canvas == null)
+        // 已合併至主 Canvas 底下，不再自行建立 Canvas / CanvasScaler / GraphicRaycaster
+        if (GetComponent<RectTransform>() == null)
         {
-            canvas = gameObject.AddComponent<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-
-            CanvasScaler scaler = gameObject.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1080, 1920); // 直式解析度
-            scaler.matchWidthOrHeight = 0.5f;
-
-            gameObject.AddComponent<GraphicRaycaster>();
+            Debug.LogError($"{name}: TossingWall 需要掛在主 Canvas 底下的 UI 物件上（必須有 RectTransform）。");
+            return;
         }
 
         // 創建Grid容器
@@ -122,8 +114,8 @@ public class TossingWall : MonoBehaviour
         float totalHeight = (cellSize.y * rows) + (spacing.y * (rows - 1));
         gridRect.sizeDelta = new Vector2(totalWidth, totalHeight);
 
-        string canvasName = isFirstCanvas ? "Canvas 1-30" : "Canvas 31-60";
-        Debug.Log($"{canvasName} initialized: Grid size {totalWidth}x{totalHeight}, Numbers {startNumber}-{endNumber}");
+        string wallName = isFirstCanvas ? "TossingWall 1-30" : "TossingWall 31-60";
+        Debug.Log($"{wallName} initialized: Grid size {totalWidth}x{totalHeight}, Numbers {startNumber}-{endNumber}");
     }
 
     /// <summary>
@@ -219,10 +211,10 @@ public class TossingWall : MonoBehaviour
     /// </summary>
     public void SetCheckingState(int number)
     {
-        // 檢查編號是否在此Canvas的範圍內
+        // 檢查編號是否在此區塊的範圍內
         if (number < startNumber || number > endNumber)
         {
-            Debug.LogWarning($"Number {number} is not in this canvas range ({startNumber}-{endNumber})");
+            Debug.LogWarning($"Number {number} is not in this wall range ({startNumber}-{endNumber})");
             return;
         }
 
@@ -248,7 +240,7 @@ public class TossingWall : MonoBehaviour
     }
 
     /// <summary>
-    /// 檢查指定編號是否屬於此Canvas
+    /// 檢查指定編號是否屬於此區塊
     /// </summary>
     public bool ContainsNumber(int number)
     {
