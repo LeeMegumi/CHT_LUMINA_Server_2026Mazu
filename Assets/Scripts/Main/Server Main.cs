@@ -74,7 +74,7 @@ public class ServerMain : MonoBehaviour
         if(instance == null) instance = this;
         _init();
     }
-
+    public UIBlurFader blurFader;
     // Update is called once per frame
     void Update()
     {
@@ -97,6 +97,7 @@ public class ServerMain : MonoBehaviour
             TcpServer.SendCommandToAll("NORMALMODE");
             ServerAllReset();
             UI_TipText.text = "LUMINA待機中！";   //Canvas 擲筊說明UI
+            blurFader.FadeIn();
         } //Reset
         if (Input.GetKeyUp(KeyCode.C))
         {
@@ -109,7 +110,8 @@ public class ServerMain : MonoBehaviour
             UI_TipText.text = "與LUMINA自由問答中！";   //Canvas 擲筊說明UI
             Lumina_Animtor.NormalIdleLoop = true;
             Lumina_Animtor.PlaySingleAnimation("W-2 Final", true, null, LuminaCharatorAnimatorController.LoopMode.NormalIdle);
-        } 
+            blurFader.FadeOut();
+        }
         //Chat
         if (Input.GetKeyUp(KeyCode.S))
         {
@@ -156,6 +158,7 @@ public class ServerMain : MonoBehaviour
         TcpServer.SendCommandToAll("RESET");
         Lumina_Animtor.SleepIdleLoop = true;
         Lumina_Animtor.PlaySingleAnimation("W-2 Final", true, null, LuminaCharatorAnimatorController.LoopMode.SleepIdle);
+        blurFader.FadeIn();
     }
     /// <summary>
     /// 重製對話

@@ -303,18 +303,17 @@ public class ElevenLabs_VAD : MonoBehaviour
 
             if (!string.IsNullOrEmpty(response.text))
             {
-                // 同時移除：半形括號 (...) 與 全形括號 （...）
-                // \([^)]*\)   處理半形 ()
-                // |           或
-                // （[^）]*）  處理全形 （）
-                string tempwords = Regex.Replace(
-                    response.text,
-                    @"\([^)]*\)|（[^）]*）",
-                    ""
-                ); 
+                // 第一層過濾：移除各種括號標註（環境音效、非語音事件等）
+                string tempwords = CleanTranscript(response.text);
 
-            // 去掉前後空白
-            tempwords = tempwords.Trim();
+                // 過濾後如果整句都沒了（例如只錄到「[碰撞聲]」），就不要往下送
+                if (string.IsNullOrEmpty(tempwords))
+                {
+                    Debug.Log($"過濾後無有效內容，原文：{response.text}");
+                    transcriptionText.text = "";
+                    UpdateStatus("未辨識到文字內容");
+                    return;
+                }
 
                 string trad = FontConvert.Instance.ConvertToTraditional(tempwords);
                 Debug.Log(trad);
@@ -338,6 +337,43 @@ public class ElevenLabs_VAD : MonoBehaviour
             UpdateStatus("錯誤：解析回應失敗");
             Debug.LogError($"解析錯誤：{e.Message}\n回應內容：{jsonResponse}");
         }
+    }
+
+    /// <summary>
+    /// 語音轉文字結果的第一層過濾。
+    /// 移除 STT 常見的「非語音事件標註」，例如 [碰撞聲]、（笑）、【背景音樂】等，
+    /// 只保留使用者真正說出來的內容。
+    /// 範例：「[碰撞聲]哈囉，你好呀！」→「哈囉，你好呀！」
+    /// </summary>
+    string CleanTranscript(string raw)
+    {
+        if (string.IsNullOrEmpty(raw)) return "";
+
+        string s = raw;
+
+        // 1) 移除各種括號與其內容（半形 / 全形 / 方括號 / 中文方頭括號 / 角括號）
+        //    \[[^\]]*\]   → [碰撞聲]
+        //    \([^)]*\)    → (laughs)
+        //    （[^）]*）    → （笑）
+        //    【[^】]*】    → 【背景音樂】
+        //    〔[^〕]*〕    → 〔咳嗽〕
+        //    ＜[^＞]*＞ / <[^>]*> → <noise>
+        s = Regex.Replace(
+            s,
+            @"\[[^\]]*\]|\([^)]*\)|（[^）]*）|【[^】]*】|〔[^〕]*〕|＜[^＞]*＞|<[^>]*>",
+            ""
+        );
+
+        // 2) 移除沒有配對到的殘留括號符號（避免只錄到半邊的情況）
+        s = Regex.Replace(s, @"[\[\]（）【】〔〕＜＞]", "");
+
+        // 3) 收斂多餘空白：連續空白壓成一個
+        s = Regex.Replace(s, @"[ \t　]{2,}", " ");
+
+        // 4) 去掉句首殘留的標點（例如括號被移掉後留下的「，」「。」）
+        s = Regex.Replace(s, @"^[\s，,。.、！!？?；;：:～~\-—]+", "");
+
+        return s.Trim();
     }
 
     byte[] ConvertAudioClipToWav(AudioClip clip, int recordPosition = -1, float dropTimeSec = 0f)
