@@ -7,7 +7,8 @@ public class TossingWallManager : MonoBehaviour
     [SerializeField] private TossingWall canvas1_30;
     [SerializeField] private TossingWall canvas31_60;
 
-    public Image LuckyContentImage; // 用於顯示籤詩內容的Image
+    public Image leftLuckyContentImage; // 用於顯示籤詩內容的Image
+    public Image rightLuckyContentImage; // 用於顯示籤詩內容的Image
     public Sprite[] LuckyCotents; // 存放籤詩內容的Sprite陣列，需在Inspector中設置
 
     private void Start()
@@ -51,7 +52,8 @@ public class TossingWallManager : MonoBehaviour
     public void ConfirmCurrent(int number)
     {
         Debug.Log("Confirming number: " + number);
-        LuckyContentImage.sprite = LuckyCotents[number - 1]; // 根據編號顯示對應的籤詩內容
+        leftLuckyContentImage.sprite = LuckyCotents[number - 1]; // 根據編號顯示對應的籤詩內容
+        rightLuckyContentImage.sprite = LuckyCotents[number - 1]; // 根據編號顯示對應的籤詩內容
                                                              
         if (number >= 1 && number <= 30)
         {

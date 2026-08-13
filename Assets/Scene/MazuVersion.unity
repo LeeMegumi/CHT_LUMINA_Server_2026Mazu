@@ -25764,7 +25764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas1_30: {fileID: 1516815000}
   canvas31_60: {fileID: 1979361962}
-  LuckyContentImage: {fileID: 1306692861}
+  leftLuckyContentImage: {fileID: 1306692861}
+  rightLuckyContentImage: {fileID: 518032062}
   LuckyCotents:
   - {fileID: 21300000, guid: 6da0cc0973fe71144808a619bd43b05c, type: 3}
   - {fileID: 21300000, guid: 4559f9112dba4af4180196e12313a62b, type: 3}
@@ -42436,7 +42437,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 355020841}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -46671,6 +46672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6777274265008342711}
   - component: {fileID: 2408332363092103605}
+  - component: {fileID: 6777274265008342712}
   m_Layer: 0
   m_Name: Sky and Fog Volume
   m_TagString: Untagged
@@ -52472,6 +52474,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3978983305567952581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6777274265008342712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688892305383618650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750808dc5d82ad74692ce1db05eb5727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetVolume: {fileID: 2408332363092103605}
+  skyType: 1
+  rotationSpeed: 0.5
+  speedMultiplier: 1
+  startRotation: 0
+  useUnscaledTime: 1
+  previewInEditMode: 0
+  restoreOnDisable: 1
 --- !u!4 &6782870642612733704
 Transform:
   m_ObjectHideFlags: 0
