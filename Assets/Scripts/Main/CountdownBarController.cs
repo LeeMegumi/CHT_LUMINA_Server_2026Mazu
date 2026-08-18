@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class CountdownBarController : MonoBehaviour
 {
     [Header("設定倒數時間 (秒)")]
-    public float totalTime = 300f; // 300 秒
+    public float totalTime = 120f; // 120 秒
 
     [Header("連結倒數用 Image")]
     public Image countdownImage;

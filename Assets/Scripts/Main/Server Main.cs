@@ -3,9 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static KioskWebRTCManager;
-using static ServerMain;
-using static UnityEngine.Rendering.GPUSort;
 using Random = UnityEngine.Random;
 
 public class ServerMain : MonoBehaviour
@@ -35,9 +32,6 @@ public class ServerMain : MonoBehaviour
 
     [Header("問答倒數系統")]
     public CountdownBarController CountDownTimer;
-
-    [Header("ARD")]
-    public ArduinoBasic ARD;
 
     [Header("重製冷卻時間")]
     public bool isResetting = false;
@@ -158,7 +152,7 @@ public class ServerMain : MonoBehaviour
         TcpServer.SendCommandToAll("RESET");
         Lumina_Animtor.SleepIdleLoop = true;
         Lumina_Animtor.PlaySingleAnimation("W-2 Final", true, null, LuminaCharatorAnimatorController.LoopMode.SleepIdle);
-        blurFader.FadeIn();
+        blurFader.FadeOut();  //毛玻璃離場
     }
     /// <summary>
     /// 重製對話
@@ -206,6 +200,7 @@ public class ServerMain : MonoBehaviour
         if(currentStage != Stage.Sleep) yield break; //如果不在Sleep狀態，則不執行喚醒動作
         NextStage(Stage.Opening);  //進入喚醒狀態
         AvatarSkipConversation();
+        blurFader.FadeIn();  //毛玻璃進場
         float audioLength = LuminaAudio.LuminaAudioClip_Open.length;
         LuminaAudio.PlayCustomAudio(LuminaAudio.LuminaAudioClip_Open); //嘴型跟音檔。
         ChatManager.instance.AddAIMessage("人工智慧通玄理，命運未來啟鴻圖，歡迎來到抽籤未來！");
@@ -215,6 +210,7 @@ public class ServerMain : MonoBehaviour
         TcpServer.SendCommandToAll("SERVERCALLBACK");  //通知Client端，動畫結束了，可以進入下一步了。
         NextStage(Stage.Lottery);  //進入抽籤環節
         UI_TipText.text = "請搖晃手上的LUMINA籤筒！";   //Canvas 擲筊說明UI
+
     }
     /// <summary>
     /// 接收到搖晃籤筒訊號的動作
@@ -306,7 +302,6 @@ public class ServerMain : MonoBehaviour
 
         {
             //動畫結束後要做的事情
-            ARD.readMessage = "";
             NextStage(Stage.FreeQA);  //進入擲筊遊戲                                                              
             UI_Animtor.Play("ToQA");  //UI動畫
             //Canvas 擲筊說明UI
@@ -356,6 +351,7 @@ public class ServerMain : MonoBehaviour
         TcpServer.SendCommandToAll("SERVERCALLBACK");  //通知Client端，動畫結束了，可以進入下一步了。
         TcpServer.SendCommandToAll("RESET");
         ServerAllReset();
+        blurFader.FadeOut();  //毛玻璃離場
     }
     void TalkDetect()
     {
@@ -364,9 +360,8 @@ public class ServerMain : MonoBehaviour
             TTS_System.StopRecording();
             return;
         }
-        if ((Input.GetKeyUp(KeyCode.T) || ARD.readMessage == "Coin") && TTS_System.Talkbool() && !TTS_System.isRecording)
+        if (Input.GetKeyUp(KeyCode.T) && TTS_System.Talkbool() && !TTS_System.isRecording)
         {
-            ARD.readMessage = "";
             if (QACount > 0 && CountDownTimer.remainingTime > 0)
             {
                 QACount--;
@@ -390,7 +385,6 @@ public class ServerMain : MonoBehaviour
     public void ServerAllReset()
     {
         currentStage = Stage.Sleep;
-        ARD.readMessage = "";
         
         TossingWallManager.Instance.ClearAll();  //新增閃爍狀態
         QACount = 5;
@@ -403,6 +397,7 @@ public class ServerMain : MonoBehaviour
         CountDownTimer.ResetAndPause(); //問答倒數重製
         Lumina_Animtor.SleepIdleLoop = true;
         Lumina_Animtor.PlaySingleAnimation("W-2 Final", true, null, LuminaCharatorAnimatorController.LoopMode.SleepIdle);
+        blurFader.FadeOut();  //毛玻璃離場
     }
 
     void RestCounter()
