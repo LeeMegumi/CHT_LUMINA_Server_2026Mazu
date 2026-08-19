@@ -91,7 +91,7 @@ public class ServerMain : MonoBehaviour
             TcpServer.SendCommandToAll("NORMALMODE");
             ServerAllReset();
             UI_TipText.text = "LUMINA待機中！";   //Canvas 擲筊說明UI
-            blurFader.FadeIn();
+            blurFader.FadeOut();
         } //Reset
         if (Input.GetKeyUp(KeyCode.C))
         {
@@ -109,6 +109,7 @@ public class ServerMain : MonoBehaviour
         //Chat
         if (Input.GetKeyUp(KeyCode.S))
         {
+            
             interactMode = interactMode == InteractMode.Normal ? InteractMode.Safe : InteractMode.Normal;
             SafeTag.SetActive(interactMode == InteractMode.Normal ? false : true);
             if(interactMode == InteractMode.Normal)
@@ -335,17 +336,17 @@ public class ServerMain : MonoBehaviour
         switch(randomIndex)
         {
             case 0:
-                ChatManager.instance.AddAIMessage("我的靈力用盡，一滴都不剩了，好啦好啦，最後給您一個改善運勢的小秘訣喔～申辦中華電信的相關業務，相信對你的運勢會更有幫助喔～ Lumi！");
+                ChatManager.instance.AddAIMessage("我的靈力用盡，一滴都不剩了，好啦好啦，讓我推薦你馬祖幾個好玩的地方～ 你可以用手機掃描旁邊地圖上的QRcode。祝您心想事成，闔家平安～玩的愉快喔～");
                 break;
             case 1:
-                ChatManager.instance.AddAIMessage("天機不可洩漏，再多我就吐血了，好啦好啦，最後給您一個改善運勢的小秘訣喔～申辦中華電信的相關業務，相信對你的運勢會更有幫助喔～，謝謝貴客，可以附近逛逛唷～ Lumi！");
+                ChatManager.instance.AddAIMessage("天機不可洩漏，再多我就吐血了，好啦好啦，讓我推薦你馬祖幾個好玩的地方～ 你可以用手機掃描旁邊地圖上的QRcode。祝您心想事成，闔家平安～玩的愉快喔～");
                 break;
             case 2:
-                ChatManager.instance.AddAIMessage("啊我沒電了，關機中，好啦好啦，最後給您一個改善運勢的小秘訣喔～申辦中華電信的相關業務，相信對你的運勢會更有幫助喔～謝謝貴客，可以附近逛逛唷～Lumi！ ");
+                ChatManager.instance.AddAIMessage("啊我沒電了，關機中，好啦好啦，讓我推薦你馬祖幾個好玩的地方～ 你可以用手機掃描旁邊地圖上的QRcode。祝您心想事成，闔家平安～玩的愉快喔～");
                 break;
         }
         Lumina_Animtor.PlaySingleAnimation("END", returnLoopMode: LuminaCharatorAnimatorController.LoopMode.SleepIdle);
-        yield return new WaitForSeconds(audioLength); //等待音檔播放完畢
+        yield return new WaitForSeconds(audioLength + 10F); //等待音檔播放完畢+多十秒的等待
         NextStage(Stage.Sleep);  //進入抽籤環節
         UI_TipText.text = "請搖晃手上的LUMINA籤筒，喚醒LUMINA！";  //Canvas 擲筊說明UI
         TcpServer.SendCommandToAll("SERVERCALLBACK");  //通知Client端，動畫結束了，可以進入下一步了。

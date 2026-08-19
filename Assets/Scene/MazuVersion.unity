@@ -12329,7 +12329,7 @@ MonoBehaviour:
   QACount: 0
   CountDownTimer: {fileID: 258561138}
   isResetting: 0
-  constResetCooldown: 5
+  constResetCooldown: 3
   ResetCooldown: 0
   currentStage: 0
   interactMode: 0
