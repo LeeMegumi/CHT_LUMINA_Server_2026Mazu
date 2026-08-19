@@ -35,7 +35,7 @@ public class ServerMain : MonoBehaviour
 
     [Header("重製冷卻時間")]
     public bool isResetting = false;
-    public float constResetCooldown = 5f;
+    public float constResetCooldown = 3f;
     public float ResetCooldown;
 
     public enum Stage
@@ -66,7 +66,7 @@ public class ServerMain : MonoBehaviour
     void Start()
     {
         if(instance == null) instance = this;
-        _init();
+        Invoke("_init", 1f);
     }
     public UIBlurFader blurFader;
     // Update is called once per frame
@@ -82,7 +82,7 @@ public class ServerMain : MonoBehaviour
         {
             AvatarSkipConversation();
         } //Skip
-        if (Input.GetKeyUp(KeyCode.R) && !isResetting)
+        if (Input.GetKeyUp(KeyCode.R) && !isResetting &&  !LuminaAudio.customAudiosource.isPlaying)
         {
             AvatarSkipConversation();
             LuminaAudio.AudioStop();
@@ -92,6 +92,7 @@ public class ServerMain : MonoBehaviour
             ServerAllReset();
             UI_TipText.text = "LUMINA待機中！";   //Canvas 擲筊說明UI
             blurFader.FadeOut();
+            UI_Animtor.Play("Sleep");
         } //Reset
         if (Input.GetKeyUp(KeyCode.C))
         {
@@ -108,8 +109,7 @@ public class ServerMain : MonoBehaviour
         }
         //Chat
         if (Input.GetKeyUp(KeyCode.S))
-        {
-            
+        { 
             interactMode = interactMode == InteractMode.Normal ? InteractMode.Safe : InteractMode.Normal;
             SafeTag.SetActive(interactMode == InteractMode.Normal ? false : true);
             if(interactMode == InteractMode.Normal)
@@ -120,9 +120,17 @@ public class ServerMain : MonoBehaviour
             {
                 TcpServer.SendCommandToAll("SAFEMODE");
             }
-        } 
+        }
         //Safe
-        
+        if (Input.GetKeyUp(KeyCode.P) && !TTS_System.isRecording)
+        {
+            QACount = 0;
+            StopAllCoroutines();
+            AvatarSkipConversation();
+            AudioPlayer.instance.PlayAudio(3); //Play Energe Empty 
+            StartCoroutine(EndAction());
+            return;
+        }
         switch (currentStage)
         {
            case Stage.FreeQA:
@@ -146,14 +154,15 @@ public class ServerMain : MonoBehaviour
         CountDownTimer.ResetAndPause(); //問答倒數重製
         currentStage = Stage.Sleep;
         
-        QACount = 5;
+        QACount = 3;
         QACountText.text = "剩餘問答次數：" + QACount;
         ResetCooldown = constResetCooldown;
         isResetting = false;
-        TcpServer.SendCommandToAll("RESET");
+        
         Lumina_Animtor.SleepIdleLoop = true;
         Lumina_Animtor.PlaySingleAnimation("W-2 Final", true, null, LuminaCharatorAnimatorController.LoopMode.SleepIdle);
         blurFader.FadeOut();  //毛玻璃離場
+        TcpServer.SendCommandToAll("RESET");
     }
     /// <summary>
     /// 重製對話
@@ -378,6 +387,14 @@ public class ServerMain : MonoBehaviour
                 StartCoroutine(EndAction());
             }
         }
+        if (Input.GetKeyUp(KeyCode.P)&& !TTS_System.isRecording)
+        {
+            QACount = 0;
+            StopAllCoroutines();
+            AvatarSkipConversation();
+            AudioPlayer.instance.PlayAudio(3); //Play Energe Empty 
+            StartCoroutine(EndAction());
+        }
 
     }
     /// <summary>
@@ -388,7 +405,7 @@ public class ServerMain : MonoBehaviour
         currentStage = Stage.Sleep;
         
         TossingWallManager.Instance.ClearAll();  //新增閃爍狀態
-        QACount = 5;
+        QACount = 3;
         QACountText.text = "剩餘問答次數：" + QACount;
         ChatManager.instance.ClearAllMessages();
         CoinFlipGame.instance.ResetCoins();

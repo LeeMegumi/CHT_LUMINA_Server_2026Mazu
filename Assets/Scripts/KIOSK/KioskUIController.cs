@@ -43,11 +43,11 @@ public class KioskUIController : MonoBehaviour
     [SerializeField]
     public List<KeyBinding> bindings = new List<KeyBinding>
     {
-        new KeyBinding { key = KeyCode.A, message = "你好",                         channel = "chat",  note = "打招呼" },
-        new KeyBinding { key = KeyCode.S, message = "你叫什麼名字？",                channel = "chat",  note = "測試回覆" },
-        new KeyBinding { key = KeyCode.D, message = "我抽到第二十五籤，可以幫我唸出籤詩並解籤嗎？",  channel = "chat",  note = "解籤情境" },
-        new KeyBinding { key = KeyCode.F, message = "How old are you?",             channel = "chat",  note = "英文測試" },
-        new KeyBinding { key = KeyCode.G, message = "測試語音直接播放",              channel = "echo",  note = "echo：不經 LLM 直接 TTS" },
+        new KeyBinding { key = KeyCode.Alpha0, message = "你好",                         channel = "chat",  note = "打招呼" },
+        new KeyBinding { key = KeyCode.Alpha1, message = "你叫什麼名字？",                channel = "chat",  note = "測試回覆" },
+        new KeyBinding { key = KeyCode.Alpha2, message = "我抽到第二十五籤，可以幫我唸出籤詩並解籤嗎？",  channel = "chat",  note = "解籤情境" },
+        new KeyBinding { key = KeyCode.Alpha3, message = "How old are you?",             channel = "chat",  note = "英文測試" },
+        new KeyBinding { key = KeyCode.Alpha4, message = "測試語音直接播放",              channel = "echo",  note = "echo：不經 LLM 直接 TTS" },
     };
 
     [Header("功能鍵")]
