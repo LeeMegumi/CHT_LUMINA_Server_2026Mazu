@@ -88,7 +88,7 @@ public class ServerMain : MonoBehaviour
             LuminaAudio.AudioStop();
             isResetting = true;
             TcpServer.SendCommandToAll("RESET");
-            TcpServer.SendCommandToAll("NORMALMODE");
+            //TcpServer.SendCommandToAll("NORMALMODE");
             ServerAllReset();
             UI_TipText.text = "LUMINA待機中！";   //Canvas 擲筊說明UI
             blurFader.FadeOut();
@@ -410,7 +410,7 @@ public class ServerMain : MonoBehaviour
         ChatManager.instance.ClearAllMessages();
         CoinFlipGame.instance.ResetCoins();
         AvatarClearConversation();
-        interactMode = InteractMode.Normal;
+        //interactMode = InteractMode.Normal;
         SafeTag.SetActive(interactMode == InteractMode.Normal ? false : true);
         CountDownTimer.ResetAndPause(); //問答倒數重製
         Lumina_Animtor.SleepIdleLoop = true;

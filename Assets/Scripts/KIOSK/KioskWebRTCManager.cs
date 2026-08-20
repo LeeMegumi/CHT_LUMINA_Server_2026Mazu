@@ -131,7 +131,7 @@ public class KioskWebRTCManager : MonoBehaviour
             }
         }
 
-        public bool IsText => type == "text";
+        public bool IsText => (type =="text" || type == "card");
         public bool IsError => type == "error";
     }
 
@@ -743,7 +743,7 @@ public class KioskWebRTCManager : MonoBehaviour
 
         Debug.Log($"💬 [{e.label}] status={e.status},isText={string.IsNullOrEmpty(e.Text)}, type={e.type}, " +
                   $"msg_type={e.msgType}, thinking={e.thinkingStatus}, speaking={e.speakingStatus}\n" +
-                  $"   內容: {Shorten(e.Text, 120)}");
+                  $"   內容: {Shorten(e.Text, 120)}," + "狀態 : "+e.IsText);
 
         // 只在 start 時把文字送進聊天畫面，避免 end 事件重複顯示
         if (e.status == "start" && e.IsText && !string.IsNullOrEmpty(e.Text) && e.speakingStatus == "talking")
@@ -760,11 +760,11 @@ public class KioskWebRTCManager : MonoBehaviour
         if (e.IsError)
             Debug.LogError($"❌ 後端回報錯誤: {e.Text}");
 
-        /*if (!string.IsNullOrEmpty(e.speakingStatus) && e.speakingStatus != lastSpeakingStatus)
+        if (!string.IsNullOrEmpty(e.speakingStatus) && e.speakingStatus != lastSpeakingStatus)
         {
             lastSpeakingStatus = e.speakingStatus;
             OnSpeakingStatusChanged?.Invoke(e.speakingStatus);
-        }*/
+        }
 
         OnChatEvent?.Invoke(e);
     }
