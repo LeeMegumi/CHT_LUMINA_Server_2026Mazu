@@ -54,7 +54,7 @@ public class KioskWebRTCManager : MonoBehaviour
 
     [Header("V2 協議設定")]
     [Tooltip("協議版本，目前固定 v2")]
-    public string protocolVersion = "v2";
+    [SerializeField]public string protocolVersion = "v2";
 
     [Tooltip("送出 chat / command 時的預設語系")]
     public string defaultLanguage = "zh-TW";
@@ -342,9 +342,9 @@ public class KioskWebRTCManager : MonoBehaviour
 
         if (samples == 0) return;
 
-        Debug.Log($"🎵 音訊接收中：{samples} samples/秒, {ch}ch @ {rate}Hz, " +
-                  $"最大音量 RMS={peak:F4} " +
-                  $"{(peak < 0.0001f ? "← 幾乎靜音，代表對方沒在說話" : "← 有聲音資料")}");
+        //Debug.Log($"🎵 音訊接收中：{samples} samples/秒, {ch}ch @ {rate}Hz, " +
+                  //$"最大音量 RMS={peak:F4} " +
+                  //$"{(peak < 0.0001f ? "← 幾乎靜音，代表對方沒在說話" : "← 有聲音資料")}");
     }
 
     private float CalculateRMS(float[] data)
@@ -741,25 +741,30 @@ public class KioskWebRTCManager : MonoBehaviour
             rawJson = json
         };
 
-        Debug.Log($"💬 [{e.label}] status={e.status}, type={e.type}, " +
+        Debug.Log($"💬 [{e.label}] status={e.status},isText={string.IsNullOrEmpty(e.Text)}, type={e.type}, " +
                   $"msg_type={e.msgType}, thinking={e.thinkingStatus}, speaking={e.speakingStatus}\n" +
                   $"   內容: {Shorten(e.Text, 120)}");
 
         // 只在 start 時把文字送進聊天畫面，避免 end 事件重複顯示
-        if (e.status == "start" && e.IsText && !string.IsNullOrEmpty(e.Text))
+        if (e.status == "start" && e.IsText && !string.IsNullOrEmpty(e.Text) && e.speakingStatus == "talking")
         {
+            Debug.Log("發送到聊天室的內容:" + e.Text);
             if (ChatManager.instance != null)
+            {
                 ChatManager.instance.AddAIMessage(e.Text);
+                
+            }
+                
         }
 
         if (e.IsError)
             Debug.LogError($"❌ 後端回報錯誤: {e.Text}");
 
-        if (!string.IsNullOrEmpty(e.speakingStatus) && e.speakingStatus != lastSpeakingStatus)
+        /*if (!string.IsNullOrEmpty(e.speakingStatus) && e.speakingStatus != lastSpeakingStatus)
         {
             lastSpeakingStatus = e.speakingStatus;
             OnSpeakingStatusChanged?.Invoke(e.speakingStatus);
-        }
+        }*/
 
         OnChatEvent?.Invoke(e);
     }

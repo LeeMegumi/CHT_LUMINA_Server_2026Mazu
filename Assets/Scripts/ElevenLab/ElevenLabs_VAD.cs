@@ -90,7 +90,7 @@ public class ElevenLabs_VAD : MonoBehaviour
             float silenceDuration = Time.time - vadStopBegin.Value;
             if (silenceDuration >= vadStopTime)
             {
-                Debug.Log($"檢測到 {silenceDuration:F2} 秒靜音，自動停止錄音");
+                //Debug.Log($"檢測到 {silenceDuration:F2} 秒靜音，自動停止錄音");
                 StopRecording();
             }
         }
@@ -98,7 +98,7 @@ public class ElevenLabs_VAD : MonoBehaviour
     void CheckVoiceActivity()
     {
         int currentPosition = Microphone.GetPosition(microphoneDevice);
-        Debug.Log($"【VAD Debug】Position: {currentPosition}, StartPos: {recordingStartPosition}");  // 新增
+        //Debug.Log($"【VAD Debug】Position: {currentPosition}, StartPos: {recordingStartPosition}");  // 新增
 
         if (currentPosition < 0 || recordedClip == null) return;
 
@@ -113,7 +113,7 @@ public class ElevenLabs_VAD : MonoBehaviour
         // 修正：處理循環position（Microphone常wrap around）
         int totalSamples = recordedClip.samples;
         int startPosition = (currentPosition - samplesToCheck + totalSamples) % totalSamples;
-        Debug.Log($"【VAD Debug】SamplesCheck: {samplesToCheck}, StartPos: {startPosition}");  // 新增
+        //Debug.Log($"【VAD Debug】SamplesCheck: {samplesToCheck}, StartPos: {startPosition}");  // 新增
 
         // 取得最近的音訊資料
         float[] samples = new float[samplesToCheck * recordedClip.channels];
