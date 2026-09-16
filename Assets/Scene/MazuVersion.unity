@@ -22010,6 +22010,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -22048,6 +22060,10 @@ PrefabInstance:
     - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902143773153862721, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5902143773153862722, guid: 9761bf1cc42a4154bb5a956da516f25d, type: 3}
       propertyPath: m_Name
@@ -34243,9 +34259,10 @@ MonoBehaviour:
   useVAD: 1
   vadUpdateRate: 0.1
   vadCheckWindow: 1.5
-  vadEnergyThreshold: 0.003
+  vadEnergyThreshold: 0.002
   vadStopTime: 2.5
   dropSilencePart: 1
+  microphoneDevice: 
   isRecording: 0
   toggleCooldown: 5
 --- !u!4 &1703519222

@@ -35,7 +35,7 @@ public class ElevenLabs_VAD : MonoBehaviour
     [SerializeField] private bool dropSilencePart = true; // 是否裁掉最後的靜音段
 
     private AudioClip recordedClip;
-    private string microphoneDevice;
+    public string microphoneDevice;
     public bool isRecording = false;
     private bool isVoiceDetected = false;
     private float? vadStopBegin = null;
